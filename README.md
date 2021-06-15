@@ -43,9 +43,11 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure happens when your local functions can reach up into the parent, grandparent and great grandparent to grab functions not available at the local level. You can never reach down to children; only reach up to parents, etc.
+
 2. Study the following code, then answer the questions below.
 
-```js
 function personalDice(name){
   return function(){
       // generate random number between 1 and 6
@@ -64,9 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+closure happens on the console.log for name and for newRoll and you can tell because the child has to reach up to a parent for a value.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The Name that appears in the console.log will be the same. Since it is using random numbers, the newRoll can be different.
+
 c. What is the lexical scope of `newRoll`? 
 
+newRoll belongs or was created at the variable declaration "const NewRoll ="
 
 ### Task 3 - Stretch Goals
 
